@@ -1,13 +1,19 @@
 import random
 
+def getFile(file):
+    f = open(file, "r")
+    lst = f.readlines()
+    lst = [x.replace('\n', '') for x in lst]
+    return lst
+
 # words
 
 # verbs with object
-verbswob = ["pick up", "mix", "grab", "eat", "sit on", "play", "listen to", "kick", "smell", "remove", "touch", "pick", "prepare", "portion", "pack", "freeze", "adjust", "wash", "pat"]
-verbs = ["run", "fart", "sit", "smile", "freeze", "type", "poop", "play", "sleep", "die", "come out", "cum"]
-nouns = ["a car", "a fence", "an apple", "a chair", "a road", "a tree", "a chicken", "a hat", "a building", "a van", "wood", "a pillow", "me", "the moon", "a pancake", "a smell", "a car", "a poop", "foods", "some food", "a cooler", "a container", "containers", "a bag", "bags", "your routine", "a cleanser", "your face", "water", "a clean towel", "moisturizer", "oil", "shea butter"]
-prepositions = ["next to", "above", "below", "beside", "behind", "in front of", "inside of", "on"]
-adverbs = ["carefully ", "quickly ", "sadly ", "openly ", "happily ", "crazily ", "wierdly ", "creepily "]
+verbswob = getFile("./words/verbs with object.txt")
+verbs = getFile("./words/verbs.txt")
+nouns = getFile("./words/nouns.txt")
+prepositions = getFile("./words/prepositions.txt")
+adverbs = getFile("./words/adverbs.txt")
 
 # sentence structures
 struts = [1, 2, 3, 4]
